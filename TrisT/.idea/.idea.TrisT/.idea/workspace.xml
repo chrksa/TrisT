@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3a1e7b-d778-4a9c-b958-8af28e39f1d1" name="Changes" comment="" />
+    <list default="true" id="cb3a1e7b-d778-4a9c-b958-8af28e39f1d1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +79,7 @@
       <updated>1700848391162</updated>
       <workItem from="1700848399269" duration="2823000" />
       <workItem from="1700852455330" duration="1177000" />
+      <workItem from="1700860727146" duration="2558000" />
     </task>
     <servers />
   </component>

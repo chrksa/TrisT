@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorLight : MonoBehaviour
+public class FollowPointLight : MonoBehaviour
 {
+    
+    
     private float mouseCursorSpeed;
     private Light light;
     
@@ -21,7 +23,7 @@ public class CursorLight : MonoBehaviour
         //light.spotAngle = (int) (22 / (Vector2.Distance(oldpos, transform.position) + 1) * spotAngleFactor);
         //Debug.Log("" + Vector2.Distance(oldpos, transform.position));
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(cursorPos.x, cursorPos.y, -20.0f);
+        transform.position = new Vector3(cursorPos.x, cursorPos.y, -5.0f);
 
         
     }
