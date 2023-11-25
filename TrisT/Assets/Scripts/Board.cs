@@ -11,9 +11,15 @@ public class Board : MonoBehaviour
     public ShapeData[] shapes;
     public PlayablePiece activePiece;
     public Vector3Int spawnPos { get; private set; }
+    public Vector2Int boardSize = new Vector2Int(10,20);
 
     private void Awake() 
     {
+        //Framerate 60
+        QualitySettings.vSyncCount = 0; // Vsync disabled
+        Application.targetFrameRate = 60;
+
+
         this.tilemap = GetComponentInChildren<Tilemap>();  // tilemap ist child von GameObject, dass mit Board verknüpft ist
         this.activePiece = GetComponentInChildren<PlayablePiece>();
 
@@ -25,6 +31,10 @@ public class Board : MonoBehaviour
 
     private void Start() => SpawnShape();
 
+    private void GameOver()
+    {
+        tilemap.ClearAllTiles();
+    }
     private void SpawnShape() 
     {
         int rand = Random.Range(0, this.shapes.Length);
@@ -39,10 +49,34 @@ public class Board : MonoBehaviour
     private void Set(PlayablePiece piece)
     {
         this.activePiece = piece;
-        for (int i = 0;i < piece.Arr.Length; i++) 
+        for (int i = 0;i < piece.Cells.Length; i++) 
         {
-            Vector3Int tilePosition = piece.Arr[i]+piece.position; // global position
+            Vector3Int tilePosition = piece.Cells[i]+piece.position; // global position
             this.tilemap.SetTile(tilePosition, piece.data.tile); // male tile 
         }
+    }
+
+    public void Clear(PlayablePiece activePiece) 
+    {
+        for (int i = 0; i < activePiece.Cells.Length; i++) 
+        {
+            Vector3Int tileposition= activePiece.Cells[i] + activePiece.position;
+            tilemap.SetTile(tileposition, null);
+        }
+    }
+
+    private void IsLineFull()   // überprüfe jede Spalte auf 10 pieces
+    {
+
+    }
+
+    private void Update()
+    {
+        //clear old playable piece
+
+        //get new position
+
+
+
     }
 }
