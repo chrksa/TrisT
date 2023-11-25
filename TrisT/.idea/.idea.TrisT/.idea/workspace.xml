@@ -5,13 +5,80 @@
       <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons/TetrisButton7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Fonts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft SDF.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Fonts/Minecraft.ttf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileDBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileDBlue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileDGreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileDGreen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileLBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileLBlue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileLGreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileLGreen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileOrange.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileOrange.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TilePink.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TilePink.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileRed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileRed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileViolet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileViolet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileYellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileYellow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/TetrisBG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/TetrisBG.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDBlue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDGreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDGreen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileLBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileLBlue.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileLGreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileLGreen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileOrange.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileOrange.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TilePink.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TilePink.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileRed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileRed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileViolet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileViolet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileYellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileYellow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/TrisT.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/TrisT.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/test.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/test.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/test.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/test.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/test2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/test2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/test2.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/test2.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GlowText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GlowText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GlowText.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GlowText.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Achievements.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Achievements.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Achievements.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Achievements.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MasterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MasterScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlowTextColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GlowTextColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlowTextColor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GlowTextColor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
@@ -313,7 +380,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UpgradeLog.htm" beforeDir="false" afterPath="$PROJECT_DIR$/UpgradeLog.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
