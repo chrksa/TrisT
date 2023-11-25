@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 696656855}
   - component: {fileID: 696656854}
   - component: {fileID: 696656853}
+  - component: {fileID: 696656856}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -380,6 +381,8 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: 16dcc58b27fbca44cacf843d621feeff, type: 2}
   - Shape: 8
     tile: {fileID: 11400000, guid: 16dcc58b27fbca44cacf843d621feeff, type: 2}
+  activePiece: {fileID: 0}
+  spawnPos: {x: 0, y: 0, z: 0}
 --- !u!156049354 &696656854
 Grid:
   m_ObjectHideFlags: 0
@@ -408,48 +411,16 @@ Transform:
   - {fileID: 1457563123}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1282166355
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1282166356}
-  - component: {fileID: 1282166357}
-  m_Layer: 0
-  m_Name: Shapes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1282166356
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282166355}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.701447, y: 3.1963677, z: -0.10446146}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1282166357
+--- !u!114 &696656856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282166355}
+  m_GameObject: {fileID: 696656852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897d87894c2f21a498686b01a9595193, type: 3}
+  m_Script: {fileID: 11500000, guid: b3cdcd28dcd732c428547e1455f8bc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1457563122
@@ -578,5 +549,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 391405524}
   - {fileID: 655950343}
-  - {fileID: 1282166356}
   - {fileID: 696656855}

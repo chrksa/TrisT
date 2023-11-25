@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+/*
+ Zum kontrollieren des Spielsteins
+ */
 
 public class PlayablePiece : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Board board { get; private set; }
+    public Vector3Int position{ get; private set; } // Hier vector3 anstatt vector 2, da tilemaps Vector3 benutzen und wir jetzt das Piece auch darstellen wollen
+    public ShapeData data { get; private set; }
+    
+    public Vector3Int[] Arr { get; private set; } // GameBoard 
 
-    // Update is called once per frame
-    void Update()
+    public void Init(Vector3Int position, ShapeData playstonedata, Board board) // board um zugriff auf spiel zu haben
     {
         
+        this.position = position;
+        this.data = playstonedata;
+        this.board = board;
+
+
+        if (this.Arr == null) 
+        {
+            this.Arr= new Vector3Int[data.cells.Length]; // Anzahl an Blöcken des Spielsteine meist 4, custom pieces haben 1 oder 5 (dot oder plus)
+        }
+
+        for (int i = 0; i < data.cells.Length; i++) 
+        {
+            this.Arr[i]= (Vector3Int)data.cells[i]; // piece an stelle setzen ?
+        }
+
     }
 }

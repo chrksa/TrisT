@@ -16,8 +16,8 @@ public static class Dictionary
         { Shape.S, new Vector2Int[] { new Vector2Int( 0, 1), new Vector2Int( 1, 1), new Vector2Int(-1, 0), new Vector2Int( 0, 0) } },
         { Shape.T, new Vector2Int[] { new Vector2Int( 0, 1), new Vector2Int(-1, 0), new Vector2Int( 0, 0), new Vector2Int( 1, 0) } },
         { Shape.Z, new Vector2Int[] { new Vector2Int(-1, 1), new Vector2Int( 0, 1), new Vector2Int( 0, 0), new Vector2Int( 1, 0) } },
-        { Shape.Q, new Vector2Int[] { new Vector2Int(0,0)}},
-        { Shape.P, new Vector2Int[] { new Vector2Int( 0, 0), new Vector2Int( 1, 0), new Vector2Int( 0, 1), new Vector2Int(-1, 0), new Vector2Int( 0, -1) }}
+        //{ Shape.Q, new Vector2Int[] { new Vector2Int(0,0)}},
+        //{ Shape.P, new Vector2Int[] { new Vector2Int( 0, 0), new Vector2Int( 1, 0), new Vector2Int( 0, 1), new Vector2Int(-1, 0), new Vector2Int( 0, -1) }}
     };
 
     private static readonly Vector2Int[,] WallKicksI = new Vector2Int[,] {
