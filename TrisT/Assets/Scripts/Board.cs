@@ -16,8 +16,8 @@ public class Board : MonoBehaviour
     private void Awake() 
     {
         //Framerate 60
-        QualitySettings.vSyncCount = 0; // Vsync disabled
-        Application.targetFrameRate = 60;
+        //QualitySettings.vSyncCount = 0; // Vsync disabled
+        //Application.targetFrameRate = 60;
 
 
         this.tilemap = GetComponentInChildren<Tilemap>();  // tilemap ist child von GameObject, dass mit Board verknüpft ist
@@ -72,10 +72,14 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
-        //clear old playable piece
 
-        //get new position
+        Clear(this.activePiece);
+        activePiece.SetSpeedWithInput();
+        activePiece.GetNewPosition();
+        Set(this.activePiece);
+        
 
+        
 
 
     }

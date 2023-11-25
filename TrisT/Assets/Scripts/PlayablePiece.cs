@@ -10,7 +10,7 @@ public class PlayablePiece : MonoBehaviour
     public ShapeData data { get; private set; }
     
     public Vector3Int[] Cells { get; private set; } // GameBoard 
-    public Vector3Int speed = new Vector3Int(0,-1,0);
+    public Vector3Int speed = new Vector3Int(0,0,0);
 
     public void Init(Vector3Int position, ShapeData playstonedata, Board board) // board um zugriff auf spiel zu haben
     {
@@ -18,6 +18,7 @@ public class PlayablePiece : MonoBehaviour
         this.position = position;
         this.data = playstonedata;
         this.board = board;
+         
         
 
 
@@ -37,12 +38,25 @@ public class PlayablePiece : MonoBehaviour
     {
         return position= this.position + speed;
     }
-    private void Update()
+   
+    public void SetSpeedWithInput()
     {
-        //clear auf dem board
-        //board.Clear(this);
+        Vector3Int dir = new Vector3Int(0, 0, 0);
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            dir.y = -2;
+        }
+        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) return;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            dir.x = -1;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            dir.x = 1;
+        }
+        this.speed = dir;
 
     }
 
-    
 }
