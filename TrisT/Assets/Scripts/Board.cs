@@ -75,6 +75,7 @@ public class Board : MonoBehaviour
 
         Clear(this.activePiece);
         activePiece.SetSpeedWithInput();
+        activePiece.Rotate90();
         activePiece.GetNewPosition();
         Set(this.activePiece);
         

@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 /*
  Zum kontrollieren des Spielsteins
  */
@@ -11,6 +12,11 @@ public class PlayablePiece : MonoBehaviour
     
     public Vector3Int[] Cells { get; private set; } // GameBoard 
     public Vector3Int speed = new Vector3Int(0,0,0);
+
+    //----------------------------------------------
+    enum ROTATION { right = 0, left = 1 };
+    ROTATION rotation = ROTATION.right;
+    //----------------------------------------------
 
     public void Init(Vector3Int position, ShapeData playstonedata, Board board) // board um zugriff auf spiel zu haben
     {
@@ -42,9 +48,14 @@ public class PlayablePiece : MonoBehaviour
     public void SetSpeedWithInput()
     {
         Vector3Int dir = new Vector3Int(0, 0, 0);
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            dir.y = 1;
+        }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            dir.y = -2;
+            dir.y = -1;
         }
         if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) return;
         if (Input.GetKeyDown(KeyCode.A))
@@ -58,5 +69,29 @@ public class PlayablePiece : MonoBehaviour
         this.speed = dir;
 
     }
+    public void Rotate90() 
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            Vector3Int[] newCells = new Vector3Int[Cells.Length];
+
+            for (int i = 0; i < Cells.Length; i++)
+            {
+                Vector3Int cur = Cells[i];
+
+                if (rotation == ROTATION.right)
+                {
+                    newCells[i] = new Vector3Int(cur.y, -cur.x, cur.z);
+                }
+                else
+                {
+                    newCells[i] = new Vector3Int(-cur.y, cur.x, cur.z);
+                }
+            }
+            Cells = newCells;
+        }
+    }
+
 
 }
