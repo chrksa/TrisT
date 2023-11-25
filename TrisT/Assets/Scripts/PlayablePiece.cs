@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 /*
@@ -7,11 +8,13 @@ using static UnityEditor.FilePathAttribute;
 public class PlayablePiece : MonoBehaviour
 {
     public Board board { get; private set; }
-    public Vector3Int position{ get; private set; } // Hier vector3 anstatt vector 2, da tilemaps Vector3 benutzen und wir jetzt das Piece auch darstellen wollen
+    public Vector3Int position{ get; private set; }// Hier vector3 anstatt vector 2, da tilemaps Vector3 benutzen und wir jetzt das Piece auch darstellen wollen
+    public Vector3Int dir { get; private set; }
     public ShapeData data { get; private set; }
     
     public Vector3Int[] Cells { get; private set; } // GameBoard 
-    public Vector3Int speed = new Vector3Int(0,-1,0);
+    public Vector3Int FallSpeed = new Vector3Int(0,-1,0);
+    public Vector3Int HorizontalMovementSpeed = new Vector3Int(1, 0, 0);
 
     //----------------------------------------------
     enum ROTATION { right = 0, left = 1 };
@@ -40,30 +43,90 @@ public class PlayablePiece : MonoBehaviour
 
     }
 
-    public Vector3Int GetNewPosition()
-    {
-        return position= this.position + speed;
-    }
    
-    public void SetSpeedWithInput()
+    //returns true on succesful transition
+    public bool GetNewPosition()
     {
-        Vector3Int dir = new Vector3Int(0, 0, 0);
+        Vector3Int newPos = position + dir;
+
+        if (!verticalBorderCheck()) {
+            position =  newPos; 
+            dir = new Vector3Int(0, 0, 0);
+            return true;
+        }
+        dir = new Vector3Int(0, 0, 0);
+        return false;
+    }
+
+    public bool addFallSpeed() {
+        if (!underneathCheck()) {
+            position = position + FallSpeed;
+            return true;
+        }
+        return false;
+    }
+
+    //returns true on Collision
+    private bool OutOfBorderCheck(Vector3Int dir) {
+        for (int i = 0; i < Cells.Length; i++) {
+            int xPos = Cells[i].x + dir.x + position.x;
+            int yPos = Cells[i].y + dir.y + position.x;
+            if (board.OutOfUBorder(xPos,yPos)) return true;
+        }
+        return false;
+    }
+    private bool underneathCheck() {
+        for (int i = 0; i < Cells.Length; i++) {
+            int xPos = Cells[i].x + position.x;
+            int yPos = Cells[i].y + position.y;
+            if (board.underneathCheck(xPos, yPos)) return true;
+        }
+        return false;
+    }
+
+    private bool verticalBorderCheck() {
+        for (int i = 0; i < Cells.Length; i++) {
+            int xPos = Cells[i].x + position.x;
+            int yPos = Cells[i].y + position.y;
+            if (board.OutOfVerticalBorder(xPos, yPos)) return true;
+        }
+        return false;
+    }
+
+
+    public void Update()
+    {   
+        
+
+        //Vector3Int dir = new Vector3Int(0, 0, 0);
 
         //if (Input.GetKeyDown(KeyCode.W)){dir.y = 1;}
+        /*
+        if (!underneathCheck()){
+            dir = position + FallSpeed;
+        }*/
+        /*
         if (Input.GetKeyDown(KeyCode.S))
         {
-            dir.y = -1;
-        }
+            if (!underneathCheck()) {
+                dir = dir + FallSpeed;
+            }
+        }*/
         if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) return;
         if (Input.GetKeyDown(KeyCode.A))
         {
-            dir.x = -1;
+
+            if (!OutOfBorderCheck(HorizontalMovementSpeed * -1)) { 
+                dir = dir - HorizontalMovementSpeed;
+            }
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            dir.x = 1;
+            if (!OutOfBorderCheck(HorizontalMovementSpeed * +1)) {
+                dir = dir + HorizontalMovementSpeed;
+            }
         }
-        this.speed = dir;
+        
 
     }
     public void Rotate90() 

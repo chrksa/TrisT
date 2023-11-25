@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 /*
  Kontrolliert alles auf dem Board, außer den Spielstein(nur SpawnShape())
@@ -13,7 +14,10 @@ public class Board : MonoBehaviour
     public ShapeData[] shapes;
     public PlayablePiece activePiece;
     public Vector3Int spawnPos { get; private set; }
-    public Vector2Int boardSize = new Vector2Int(10,20);
+    public const int width = 20;
+    public const int height = 20;
+
+    PlacedPiece arr;
 
     //-------------------------------------------
     public DateTime start;
@@ -25,7 +29,7 @@ public class Board : MonoBehaviour
         //Framerate 60
         //QualitySettings.vSyncCount = 0; // Vsync disabled
         //Application.targetFrameRate = 60;
-
+        
 
         this.tilemap = GetComponentInChildren<Tilemap>();  // tilemap ist child von GameObject, dass mit Board verknüpft ist
         this.activePiece = GetComponentInChildren<PlayablePiece>();
@@ -44,6 +48,7 @@ public class Board : MonoBehaviour
         InvokeRepeating("DrawUpdate", 0f, 1f / 1f);
         this.start = DateTime.Now;
         this.scale = 1f;
+        arr = new PlacedPiece(this);
     }
 
     private void GameOver()
@@ -52,8 +57,8 @@ public class Board : MonoBehaviour
     }
     private void SpawnShape() 
     {
-        int rand = UnityEngine.Random.Range(0, this.shapes.Length);
-        ShapeData shape = this.shapes[rand+1];
+        int rand = UnityEngine.Random.Range(1, this.shapes.Length);
+        ShapeData shape = this.shapes[rand];
 
         // random spawnfunktion
         spawnPos= new Vector3Int(0, 0, 0);
@@ -84,10 +89,14 @@ public class Board : MonoBehaviour
     {
 
         Clear(this.activePiece);
-        activePiece.SetSpeedWithInput();
         activePiece.Rotate90();
-        activePiece.GetNewPosition();
+        if (!activePiece.GetNewPosition()) { 
+            //arr.insertShape(this.activePiece);
+            //SpawnShape();
+        }
         Set(this.activePiece);
+
+        //arr.drawPlacedTiles();
 
 
     }
@@ -95,8 +104,13 @@ public class Board : MonoBehaviour
     private void DrawUpdate() 
     {
         Clear(this.activePiece);
-        activePiece.speed = new Vector3Int(0, -1, 0);
-        activePiece.GetNewPosition();
+
+        if (!activePiece.addFallSpeed()) {
+            arr.insertShape(this.activePiece);
+            Debug.Log("Piece inserted");
+            Debug.Log(arr.ToString());
+            SpawnShape();
+        }
         Set(this.activePiece);
 
 
@@ -110,4 +124,31 @@ public class Board : MonoBehaviour
             scale *= 2;
         }
     }
+    //return false if its in the border
+    public bool OutOfUBorder(int x, int y) {
+        int MinX = -Board.width / 2;
+        int MaxX = (Board.width / 2) -1;
+        int MinY = -(Board.height / 2) +1;
+
+        if (x < MinX || x > MaxX || y < MinY) return true;
+
+        return false;
+    }
+    public bool OutOfVerticalBorder(int x, int y) {
+        int MinX = -(Board.width / 2);
+        int MaxX = (Board.width / 2) - 1;
+
+        if (x < MinX || x > MaxX) return true;
+
+        return false;
+    }
+    public bool underneathCheck(int x, int y) {
+        int MinY = -(Board.height / 2) +1;
+
+        if (y < MinY) return true;
+
+        return false;
+    }
+
+
 }

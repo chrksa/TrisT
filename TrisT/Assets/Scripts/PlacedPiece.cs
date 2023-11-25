@@ -6,7 +6,7 @@ using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlacedPiece : MonoBehaviour
+public class PlacedPiece //: MonoBehaviour
 {
     [SerializeField]public Board board;
     public Shape[,] grid;
@@ -17,18 +17,22 @@ public class PlacedPiece : MonoBehaviour
     const int yMin = -10;
     const int maxTileHeight = 4;
     const int posZ = 0;
-    int width;
-    int height;
+    int width  = -xMin + xMax;
+    int height = -yMin + yMax;
 
 
     private bool gameOver;
+    public PlacedPiece (Board board) // board um zugriff auf spiel zu haben
+    {
+        this.board = board;
+        grid = new Shape[width, height + maxTileHeight];
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        width = xMin + xMax;
-        height = yMin + yMax;
-        grid= new Shape[width, height + maxTileHeight];
+
+        //grid= new Shape[width, height + maxTileHeight];
         gameOver= false;
     }
 
@@ -39,19 +43,22 @@ public class PlacedPiece : MonoBehaviour
     }
     //return true if there is any error 
     public bool addTile(int x, int y, Shape shape) {
+        Debug.Log("grid[,0]" + grid[0, 0]);
+        Debug.Log("adding Tile:" + x + " " + y + " " + shape);
         if (xMin <= x && x <= xMax && yMin <= y) {
             if (y > yMax && y <= (yMax + maxTileHeight)) {
                 gameOver = true;
                 return false;
             }
-
+            
+            grid[x+xMax, y+xMax] = shape;
             return false;
         }
         Debug.LogError("Du hast versucht ein Tile hinzuzufügen, das sich außerhalb der gelegten Grenzen befindet");
         return true;
     }
 
-    private void drawPlacedTiles() {
+    public void drawPlacedTiles() {
         Tilemap map = board.tilemap;
          
         for (int y = 0; y < height; y++) {
@@ -100,13 +107,28 @@ public class PlacedPiece : MonoBehaviour
         }
     }
     public void insertShape(PlayablePiece piece) {
+        Shape shape = piece.data.shape;
+        Debug.Log("shape:" + shape);
 
         for (int i = 0; i < piece.Cells.Length; i++) {
-            int xArr = piece.Cells[i].x + piece.position.x;
-            int yArr = piece.Cells[i].y + piece.position.y;
-            addTile(xArr ,yArr , piece.data.shape);
+            int x = piece.Cells[i].x + piece.position.x + xMax;
+            int y = piece.Cells[i].y + piece.position.y + yMax;
+            addTile(x ,y , shape);
+            Debug.Log(""+ i);
         }
+        //drawPlacedTiles();
     }
 
     public bool isOver() { return gameOver; }
+
+    override public string ToString() {
+        string s = "";
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                s = s + grid[x, y] + " ";
+            }
+            s= s + "\n";
+        }
+        return s;
+    }
 }
