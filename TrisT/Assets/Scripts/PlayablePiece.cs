@@ -40,9 +40,7 @@ public class PlayablePiece : MonoBehaviour
     private void Update()
     {
         //clear auf dem board
-        board.Clear(this);
-
-        if ()
+        //board.Clear(this);
 
     }
 
