@@ -11,7 +11,7 @@ public class PlayablePiece : MonoBehaviour
     public ShapeData data { get; private set; }
     
     public Vector3Int[] Cells { get; private set; } // GameBoard 
-    public Vector3Int speed = new Vector3Int(0,0,0);
+    public Vector3Int speed = new Vector3Int(0,-1,0);
 
     //----------------------------------------------
     enum ROTATION { right = 0, left = 1 };
@@ -49,10 +49,7 @@ public class PlayablePiece : MonoBehaviour
     {
         Vector3Int dir = new Vector3Int(0, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            dir.y = 1;
-        }
+        //if (Input.GetKeyDown(KeyCode.W)){dir.y = 1;}
         if (Input.GetKeyDown(KeyCode.S))
         {
             dir.y = -1;

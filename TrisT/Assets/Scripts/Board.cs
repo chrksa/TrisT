@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -13,6 +15,11 @@ public class Board : MonoBehaviour
     public Vector3Int spawnPos { get; private set; }
     public Vector2Int boardSize = new Vector2Int(10,20);
 
+    //-------------------------------------------
+    public DateTime start;
+    public float scale;
+    //-------------------------------------------
+
     private void Awake() 
     {
         //Framerate 60
@@ -22,14 +29,22 @@ public class Board : MonoBehaviour
 
         this.tilemap = GetComponentInChildren<Tilemap>();  // tilemap ist child von GameObject, dass mit Board verknüpft ist
         this.activePiece = GetComponentInChildren<PlayablePiece>();
+       
 
         for (int i = 0; i < this.shapes.Length; i++) 
         {
             this.shapes[i].Init();
         }
+        
     }
 
-    private void Start() => SpawnShape();
+    private void Start()
+    {
+        SpawnShape();
+        InvokeRepeating("DrawUpdate", 0f, 1f / 1f);
+        this.start = DateTime.Now;
+        this.scale = 1f;
+    }
 
     private void GameOver()
     {
@@ -37,8 +52,8 @@ public class Board : MonoBehaviour
     }
     private void SpawnShape() 
     {
-        int rand = Random.Range(0, this.shapes.Length);
-        ShapeData shape = this.shapes[rand];
+        int rand = UnityEngine.Random.Range(0, this.shapes.Length);
+        ShapeData shape = this.shapes[rand+1];
 
         // random spawnfunktion
         spawnPos= new Vector3Int(0, 0, 0);
@@ -65,11 +80,6 @@ public class Board : MonoBehaviour
         }
     }
 
-    private void IsLineFull()   // überprüfe jede Spalte auf 10 pieces
-    {
-
-    }
-
     private void Update()
     {
 
@@ -78,10 +88,26 @@ public class Board : MonoBehaviour
         activePiece.Rotate90();
         activePiece.GetNewPosition();
         Set(this.activePiece);
-        
-
-        
 
 
+    }
+    
+    private void DrawUpdate() 
+    {
+        Clear(this.activePiece);
+        activePiece.speed = new Vector3Int(0, -1, 0);
+        activePiece.GetNewPosition();
+        Set(this.activePiece);
+
+
+    }
+    private void ScaleDrawUpdateSpeed() 
+    {
+        DateTime end= DateTime.Now;
+        if (end.Second - start.Second > 30) 
+        {
+            start = end;
+            scale *= 2;
+        }
     }
 }

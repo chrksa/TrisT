@@ -3,6 +3,7 @@ using UnityEngine.Tilemaps;
 
 public enum Shape
 { 
+    NULL,
     L,
     I,
     O,
