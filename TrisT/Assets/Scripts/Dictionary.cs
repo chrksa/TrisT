@@ -9,6 +9,7 @@ public static class Dictionary
 
     public static readonly Dictionary<Shape, Vector2Int[]> Cells = new Dictionary<Shape, Vector2Int[]>()
     {
+        { Shape.NULL, new Vector2Int[]{ } },
         { Shape.I, new Vector2Int[] { new Vector2Int(-1, 1), new Vector2Int( 0, 1), new Vector2Int( 1, 1), new Vector2Int( 2, 1) } },
         { Shape.J, new Vector2Int[] { new Vector2Int(-1, 1), new Vector2Int(-1, 0), new Vector2Int( 0, 0), new Vector2Int( 1, 0) } },
         { Shape.L, new Vector2Int[] { new Vector2Int( 1, 1), new Vector2Int(-1, 0), new Vector2Int( 0, 0), new Vector2Int( 1, 0) } },
