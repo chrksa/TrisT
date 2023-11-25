@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseDelta: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 5
 --- !u!1 &332016162
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eadc0ba5c4a9d5f48a781f4f5454f27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 30
 --- !u!108 &344493638
 Light:
   m_ObjectHideFlags: 0
@@ -674,6 +674,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f4b4afc8c9d42488c73cd609cd7811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _glowPow: 1
+  _setColor: 1
+  _up: 1
+  _change: 0.1
+  count: 0
+  _colCount: 0
 --- !u!1 &562943878
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,10 +870,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7663356286608595323, guid: 307daf5e94dc06d40a214058444707b9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 0}
+      addedObject: {fileID: 535852374}
     - targetCorrespondingSourceObject: {fileID: 7663356286608595323, guid: 307daf5e94dc06d40a214058444707b9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 535852374}
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 307daf5e94dc06d40a214058444707b9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
