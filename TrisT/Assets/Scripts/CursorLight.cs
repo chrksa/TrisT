@@ -5,24 +5,27 @@ using UnityEngine;
 
 public class CursorLight : MonoBehaviour
 {
-    private float mouseCursorSpeed;
-    private Light light;
+    private Light _myLight;
+    private float timer = 0;
+    [SerializeField] private float speed = 6;
     
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        light = GetComponent<Light>();
+        //Cursor.visible = false; für Felix
+        _myLight = GetComponent<Light>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        //light.spotAngle = (int) (22 / (Vector2.Distance(oldpos, transform.position) + 1) * spotAngleFactor);
-        //Debug.Log("" + Vector2.Distance(oldpos, transform.position));
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(cursorPos.x, cursorPos.y, -20.0f);
-
-        
+        timer += 0.001f;
+        _myLight.spotAngle = 21 - timer * speed;
+        if (_myLight.spotAngle <= 2)
+        {
+            _myLight.spotAngle = 21;
+            timer = 0;
+        }
     }
 }

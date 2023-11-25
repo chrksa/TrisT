@@ -9,7 +9,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LightEffects.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WiggleLight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ignore.cs" afterDir="false" />
     </list>
@@ -79,7 +81,8 @@
       <updated>1700848391162</updated>
       <workItem from="1700848399269" duration="2823000" />
       <workItem from="1700852455330" duration="1177000" />
-      <workItem from="1700860727146" duration="2558000" />
+      <workItem from="1700860727146" duration="3236000" />
+      <workItem from="1700904243246" duration="3348000" />
     </task>
     <servers />
   </component>
