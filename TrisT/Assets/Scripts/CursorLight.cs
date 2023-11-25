@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CursorLight : MonoBehaviour
 {
+    //test
     private Light _myLight;
     private float timer = 0;
     [SerializeField] private float speed = 6;
