@@ -34,7 +34,7 @@ public class CursorLight : MonoBehaviour
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(cursorPos.x, cursorPos.y, -20.0f);
         timer += 0.001f;
-        _myLight.spotAngle = 21 - timer * speed;
+        _myLight.spotAngle = 26 - timer * speed;
         if (_myLight.spotAngle <= 2)
         {
             _myLight.spotAngle = 21;

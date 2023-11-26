@@ -25,7 +25,7 @@ public class FollowPointLight : MonoBehaviour
     void Update()
     {
         timer += 0.001f;
-        _myLight.range = 6.5f - timer * speed;
+        _myLight.range = 8f - timer * speed;
 
         if (_myLight.range < 1) 
         {
