@@ -11,9 +11,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrisT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_left.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_left.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_left_selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_left_selected.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_right.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_right.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_right_selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_right_selected.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_selected.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_selected_selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Achievment_locked_selected_selected.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Amogus_unlocked.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Amogus_unlocked.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Text_Background.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Text_Background.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Achievments/Text_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Achievments/Text_Background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Amogus.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Amogus.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Achievment.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Achievment.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Achievment.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Achievment.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/AchievmentSelected.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/AchievmentSelected.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/AchievmentSelected.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/AchievmentSelected.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Amogusss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Amogusss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Amogusss.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Amogusss.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/ButtonAnimation.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Buttons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Buttons.meta" afterDir="false" />
@@ -39,6 +55,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileViolet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileViolet.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileYellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/NewTiles/TileYellow.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/TetrisBG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/TetrisBG.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/TetrisBGAmogus.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/TetrisBGAmogus.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDBlue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDBlue.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDGreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Tiles/TileDGreen.png.meta" afterDir="false" />
@@ -71,6 +88,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneLight.lighting.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AchievementButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AchievementButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CursorLight.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowPointLight.cs" afterDir="false" />
@@ -94,6 +113,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Minecraft SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Minecraft SDF 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Minecraft SDF 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Minecraft SDF 1.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt.meta" afterDir="false" />
@@ -456,7 +476,7 @@
       <workItem from="1700852455330" duration="1177000" />
       <workItem from="1700860727146" duration="3236000" />
       <workItem from="1700904243246" duration="8259000" />
-      <workItem from="1700992251819" duration="2855000" />
+      <workItem from="1700992251819" duration="4075000" />
     </task>
     <servers />
   </component>
