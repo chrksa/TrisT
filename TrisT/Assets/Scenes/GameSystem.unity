@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 696656854}
   - component: {fileID: 696656853}
   - component: {fileID: 696656856}
+  - component: {fileID: 696656857}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -410,21 +411,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapes:
   - shape: 0
-    tile: {fileID: 11400000, guid: c045327ffd720d34793369306724f2a5, type: 2}
+    tile: {fileID: 11400000, guid: e0edd6092204f554bbad5e7e2765c283, type: 2}
   - shape: 1
-    tile: {fileID: 11400000, guid: 5b2896fe5eb8ad2409494b97ae900305, type: 2}
+    tile: {fileID: 11400000, guid: c045327ffd720d34793369306724f2a5, type: 2}
   - shape: 2
-    tile: {fileID: 11400000, guid: 40e52dacc6b217e45b3b86753b2e5e24, type: 2}
+    tile: {fileID: 11400000, guid: 5b2896fe5eb8ad2409494b97ae900305, type: 2}
   - shape: 3
-    tile: {fileID: 11400000, guid: cf3594f715654e54590319e95e038d65, type: 2}
+    tile: {fileID: 11400000, guid: 40e52dacc6b217e45b3b86753b2e5e24, type: 2}
   - shape: 4
-    tile: {fileID: 11400000, guid: 85a4db62bb642934ea3c3b2abd3fac6a, type: 2}
+    tile: {fileID: 11400000, guid: cf3594f715654e54590319e95e038d65, type: 2}
   - shape: 5
-    tile: {fileID: 11400000, guid: 9449eda54ead58244a8183d8d1b02adc, type: 2}
+    tile: {fileID: 11400000, guid: 85a4db62bb642934ea3c3b2abd3fac6a, type: 2}
   - shape: 6
+    tile: {fileID: 11400000, guid: 9449eda54ead58244a8183d8d1b02adc, type: 2}
+  - shape: 7
     tile: {fileID: 11400000, guid: 21af41ae36c392c40930003fea21f1b4, type: 2}
   activePiece: {fileID: 0}
-  boardSize: {x: 10, y: 20}
   scale: 0
 --- !u!156049354 &696656854
 Grid:
@@ -467,7 +469,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3cdcd28dcd732c428547e1455f8bc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: -1, z: 0}
+  FallSpeed: {x: 0, y: -1, z: 0}
+  HorizontalMovementSpeed: {x: 1, y: 0, z: 0}
+--- !u!114 &696656857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696656852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530f11da593b0ac46b00d7c6f53c9f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1457563122
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,13 @@ public class PlayablePiece : MonoBehaviour
 {
     public Board board { get; private set; }
     public Vector3Int position{ get; private set; }// Hier vector3 anstatt vector 2, da tilemaps Vector3 benutzen und wir jetzt das Piece auch darstellen wollen
-    public Vector3Int dir { get; private set; }
+    
     public ShapeData data { get; private set; }
     
     public Vector3Int[] Cells { get; private set; } // GameBoard 
     public Vector3Int FallSpeed = new Vector3Int(0,-1,0);
     public Vector3Int HorizontalMovementSpeed = new Vector3Int(1, 0, 0);
+    public Vector3Int dir = new Vector3Int(0, 0, 0);
 
     //----------------------------------------------
     enum ROTATION { right = 0, left = 1 };
@@ -27,10 +28,6 @@ public class PlayablePiece : MonoBehaviour
         this.position = position;
         this.data = playstonedata;
         this.board = board;
-         
-        
-
-
         if (this.Cells == null) 
         {
             this.Cells= new Vector3Int[data.cells.Length]; // Anzahl an Blöcken des Spielsteine meist 4, custom pieces haben 1 oder 5 (dot oder plus)
@@ -40,95 +37,54 @@ public class PlayablePiece : MonoBehaviour
         {
             this.Cells[i]= (Vector3Int)data.cells[i]; // piece an stelle setzen ?
         }
-
+        
     }
 
-   
-    //returns true on succesful transition
-    public bool GetNewPosition()
+    public void SetNewPosition()
     {
-        Vector3Int newPos = position + dir;
-
-        if (!verticalBorderCheck()) {
-            position =  newPos; 
-            dir = new Vector3Int(0, 0, 0);
-            return true;
-        }
+        position = position + dir;
         dir = new Vector3Int(0, 0, 0);
-        return false;
+        
     }
 
-    public bool addFallSpeed() {
-        if (!underneathCheck()) {
-            position = position + FallSpeed;
-            return true;
-        }
-        return false;
+    public void  addFallSpeed() 
+    { 
+        position = position + FallSpeed;       
     }
 
-    //returns true on Collision
-    private bool OutOfBorderCheck(Vector3Int dir) {
-        for (int i = 0; i < Cells.Length; i++) {
-            int xPos = Cells[i].x + dir.x + position.x;
-            int yPos = Cells[i].y + dir.y + position.x;
-            if (board.OutOfUBorder(xPos,yPos)) return true;
+    public bool LeftSideCheck() 
+    {
+        for (int i = 0; i < Cells.Length; i++)
+        {
+            int xPos = Cells[i].x + position.x -1;
+            int yPos = Cells[i].y + position.y;
+            if ((board.xMin)-1 > xPos) return true;
+            if(board.tilegrid[xPos +11, yPos +11] != 0) return true;
         }
+        Debug.Log("leftSideCheck=False");
         return false;
     }
-    private bool underneathCheck() {
-        for (int i = 0; i < Cells.Length; i++) {
+    public bool RightSideCheck() 
+    {
+        for (int i = 0; i < Cells.Length; i++)
+        {
             int xPos = Cells[i].x + position.x;
             int yPos = Cells[i].y + position.y;
-            if (board.underneathCheck(xPos, yPos)) return true;
+            if ((board.xMax)+ 9 < xPos) return true; // 11
+            if (board.tilegrid[xPos + 11, yPos + 11] != 0) return true;
         }
         return false;
     }
-
-    private bool verticalBorderCheck() {
+    public bool UnderneathCheck() {
         for (int i = 0; i < Cells.Length; i++) {
             int xPos = Cells[i].x + position.x;
-            int yPos = Cells[i].y + position.y;
-            if (board.OutOfVerticalBorder(xPos, yPos)) return true;
+            int yPos = Cells[i].y + position.y+1;
+            //if (-(board.yMin / 2) + 1 > this.position.y) return true; 
+            if (board.tilegrid[xPos + 11, yPos + 9]!=0 ) return true;
         }
         return false;
     }
 
-
-    public void Update()
-    {   
-        
-
-        //Vector3Int dir = new Vector3Int(0, 0, 0);
-
-        //if (Input.GetKeyDown(KeyCode.W)){dir.y = 1;}
-        /*
-        if (!underneathCheck()){
-            dir = position + FallSpeed;
-        }*/
-        /*
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            if (!underneathCheck()) {
-                dir = dir + FallSpeed;
-            }
-        }*/
-        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) return;
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-
-            if (!OutOfBorderCheck(HorizontalMovementSpeed * -1)) { 
-                dir = dir - HorizontalMovementSpeed;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (!OutOfBorderCheck(HorizontalMovementSpeed * +1)) {
-                dir = dir + HorizontalMovementSpeed;
-            }
-        }
-        
-
-    }
     public void Rotate90() 
     {
         if (Input.GetKeyDown(KeyCode.Space))
