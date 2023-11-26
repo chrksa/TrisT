@@ -1,8 +1,6 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 
 /*
  Kontrolliert alles auf dem Board, außer den Spielstein(nur SpawnShape())
@@ -40,6 +38,7 @@ public class Board : MonoBehaviour
         this.tilemap = GetComponentInChildren<Tilemap>();  // tilemap ist child von GameObject, dass mit Board verknüpft ist
         this.activePiece = GetComponentInChildren<PlayablePiece>();
         this.placedPiece = GetComponentInChildren<PlacedBlock>();
+        placedPiece.Init(this);
         tilegrid = new int[width+2, height+2];
         for (int i = 0; i < width + 2; i++) 
         {
@@ -71,7 +70,7 @@ public class Board : MonoBehaviour
         InvokeRepeating("DrawUpdate", 0f, 1f / 1f);
         this.start = DateTime.Now;
         this.scale = 1f;
-        Debug.Log("tilegrid" + tilegrid[0, 0]);
+        //Debug.Log("tilegrid" + tilegrid[0, 0]);
         SetTileGridMaP();
         //arr = new PlacedPiece(this);
     }
@@ -117,12 +116,13 @@ public class Board : MonoBehaviour
         for (int i = 0; i < activePiece.Cells.Length; i++)
         {
             Vector3Int tileposition = activePiece.Cells[i] + activePiece.position;
-            tilemap.SetTile(tileposition, null);
+            tilemap.SetTile(tileposition, this.shapes[0].tile);
         }
     }
     public void PlayerMovement(bool underneatchCheck, bool leftsidecheck, bool rightsidecheck)
     {
         activePiece.dir = new Vector3Int(0, 0, 0);
+
         if (!underneatchCheck)
         {
             if (Input.GetKeyDown(KeyCode.S))
@@ -149,7 +149,7 @@ public class Board : MonoBehaviour
     }
     private void Update()
     {
-
+        
         Clear(this.activePiece);
         PlayerMovement(activePiece.UnderneathCheck(), activePiece.LeftSideCheck(), activePiece.RightSideCheck());
         activePiece.SetNewPosition();
@@ -169,15 +169,35 @@ public class Board : MonoBehaviour
     // ist nicht jeden Frame
     private void DrawUpdate()
     {
+
+        /*Set(activePiece);
+        Debug.Log("Arsch");
+
+        if (!activePiece.CheckMove())
+        {
+            // hier 
+            
+            Debug.Log("CheckMove= true");
+            SpawnShape();
+            
+        }*/
+
         //clear map
         Clear(this.activePiece);
 
         //check movable 
-        if (activePiece.UnderneathCheck() == false) 
+        if (!activePiece.UnderneathCheck()) 
         {
             this.activePiece.addFallSpeed();
             activePiece.SetNewPosition();
             Set(activePiece);
+
+        }
+        else
+        {
+            placedPiece.DrawPlayablePiece(activePiece);
+            placedPiece.DrawPlacedPieces();
+            SpawnShape();
 
         }
 

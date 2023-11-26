@@ -10,9 +10,9 @@ public enum Shape
     T,
     J,
     S,
-    Z,
-    Q,       // single Cube
-    P        // PLUS
+    Z
+            // single Cube
+            // PLUS
 }
 
 [System.Serializable]
