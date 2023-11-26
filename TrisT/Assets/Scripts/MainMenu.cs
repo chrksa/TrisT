@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
     public void PlayGame()
     {
         Cursor.visible = false;
