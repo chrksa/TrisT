@@ -19,7 +19,10 @@ public class AchievementButton : MonoBehaviour
     void Start()
     {
         text = com.GetComponent<TextMeshProUGUI>();
-
+        if (Unlocks[5])
+        {
+            buttons[5].GetComponent<Image>().overrideSprite = unlockedSprite[5];
+        }
 
     }
 
@@ -27,10 +30,7 @@ public class AchievementButton : MonoBehaviour
     void Update()
     {
 
-        if (Unlocks[5])
-        {
-            buttons[5].GetComponent<Image>().overrideSprite = unlockedSprite[5];
-        }
+        
     }
 
     public void Achievment1Text()
