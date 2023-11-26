@@ -27,7 +27,11 @@ public class AchievementButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Unlocks[5])
+        {
+            buttons[5].GetComponent<Image>().overrideSprite = unlockedSprite[5];
+        }
     }
 
     public void Achievment1Text()
