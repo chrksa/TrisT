@@ -1,5 +1,6 @@
 
 using UnityEngine;
+
 [System.Serializable]
 public class Board : MonoBehaviour
 {
@@ -8,7 +9,13 @@ public class Board : MonoBehaviour
     
     // Shapes PlayablePiece
     public GameObject[] Shapes {get; private set; }
-
+    
+    //Inputhandler
+    public PlayerInputHandler playerInputHandler;
+    public PlayablePiece playablePiece;
+    //PlayablePiece
+    Vector3Int _defaultSpawnPosition = new Vector3Int(0, 19, 0);
+    
     // Board dimensions
     private float _xMax;
     private float _xMin;
@@ -38,9 +45,27 @@ public class Board : MonoBehaviour
         _yMin =   0f;
         
         // Shapes PlayablePiece
-        
-        
+        playablePiece = gameObject.AddComponent<PlayablePiece>();
+        int rand= Random.Range(0, 7);
+        playablePiece.Init(rand, _defaultSpawnPosition);
+        playerInputHandler = gameObject.AddComponent<PlayerInputHandler>();
     }
-
-
+    
+    
+    // used in GameManager.cs
+    public void Update()
+    {
+        Vector3Int direction = playerInputHandler.HandleInputMovement();
+        if (direction != Vector3Int.zero)
+        {
+            playablePiece.Move(direction);
+            
+        }
+        
+        if (playerInputHandler.HandleInputRotation())
+        {
+            playablePiece.Rotate();
+        }
+    }
+    
 }
