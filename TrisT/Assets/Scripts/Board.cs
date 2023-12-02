@@ -1,20 +1,20 @@
-
 using UnityEngine;
 
-[System.Serializable]
 public class Board : MonoBehaviour
 {
     // Singleton
-    public static Board board;
+    public static Board _board;
     
-    // Shapes PlayablePiece
-    public GameObject[] Shapes {get; private set; }
+    
     
     //Inputhandler
     public PlayerInputHandler playerInputHandler;
-    public PlayablePiece playablePiece;
+    
     //PlayablePiece
-    Vector3Int _defaultSpawnPosition = new Vector3Int(0, 19, 0);
+    public PlayablePiece playablePiece;
+    
+    //PlayablePiece
+    Vector3Int _defaultSpawnPosition = new Vector3Int(10, 18, 0);
     
     // Board dimensions
     private float _xMax;
@@ -24,38 +24,43 @@ public class Board : MonoBehaviour
 
     private void Awake()
     {
-        if (board == null)
-        {
-            DontDestroyOnLoad(gameObject);  // Dont destroy this object when loading a new scene
-            board = this;
-        }
-        else if (board != this)
-        {
-            Destroy(gameObject);
-        }
-        
+        Init(20, 0, 20, 0);
     }
     
-    public void Init()
+    // Start is called before the first frame update
+    void Start()
     {
-        //Board dimensions
-        _xMax =  20f;
-        _xMin =   0f;
-        _yMax =  20f;
-        _yMin =   0f;
         
-        // Shapes PlayablePiece
-        playablePiece = gameObject.AddComponent<PlayablePiece>();
-        int rand= Random.Range(0, 7);
-        playablePiece.Init(rand, _defaultSpawnPosition);
-        playerInputHandler = gameObject.AddComponent<PlayerInputHandler>();
     }
+    public void Init(float xMax, float xMin, float yMax, float yMin)
+    {
+        Debug.Log("Board Init");
+        //Board dimensions
+        _xMax =  xMax;
+        _xMin =   xMin;
+        _yMax =  yMax;
+        _yMin =   yMin;
+        
+        
+        //PlayablePiece
+        playablePiece = gameObject.AddComponent<PlayablePiece>();
+        Debug.Log("Shapes: " + playablePiece);
+        playablePiece.Init();
+        SpawnRandomPlayablePiece();
+        
+        
+        //Inputhandler
+        playerInputHandler = gameObject.AddComponent<PlayerInputHandler>();
+        
+        Debug.Log("Board Init done");
+    }
+    
     
     
     // used in GameManager.cs
     public void Update()
     {
-        Vector3Int direction = playerInputHandler.HandleInputMovement();
+        /*Vector3Int direction = playerInputHandler.HandleInputMovement();
         if (direction != Vector3Int.zero)
         {
             playablePiece.Move(direction);
@@ -65,7 +70,17 @@ public class Board : MonoBehaviour
         if (playerInputHandler.HandleInputRotation())
         {
             playablePiece.Rotate();
-        }
+        }*/
+        
+    }
+    public void FixedUpdate()
+    {
+        //Todo: auto move down
+    }
+    public void SpawnRandomPlayablePiece()
+    {
+        int rand= Random.Range(0, 6);
+        playablePiece.CreateShape(rand, _defaultSpawnPosition);
     }
     
 }

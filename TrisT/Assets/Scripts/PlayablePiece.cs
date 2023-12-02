@@ -1,23 +1,25 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PlayablePiece : MonoBehaviour
 {
+
     
     Vector3Int _position;
     GameObject _shape;
-    Shape _shapeData;
+    public GameObject[] Shapes; // 0: I, 1: J, 2: L, 3: O, 4: S, 5: T, 6: Z
 
-    
-    
-    public void Init(int shapeType, Vector3Int position)
+    public void Init()
     {
-        _position = position;
-        _shapeData = gameObject.AddComponent<Shape>();
-        _shape= _shapeData.GetShape((Shape.ShapeType)shapeType);
+        SetShapes();
     }
 
-    public void OnDestroy()
+    /// <summary>
+    ///   Destroy PlayablePiece - Log, create PlacedBlock's and check for row
+    /// </summary>
+    public void ManualDestroy()
     {
         Debug.Log("Destroy PlayablePiece");
         // Todo: PlayablePiece is destroyed, so we need to create PlacedBlock's
@@ -25,20 +27,45 @@ public class PlayablePiece : MonoBehaviour
         Destroy(_shape);
         
     }
-    
+    /// <summary>
+    ///  Create a PlayablePiece at spawnposition (Instantiate)
+    /// </summary>
+    /// <param name="shapeType"></param>
+    /// <param name="spawnposition"></param>
     public void CreateShape(int shapeType, Vector3Int spawnposition)
     {
+        print(Shapes[shapeType]);
         _position = spawnposition;
-        Instantiate(_shape, _position, Quaternion.identity);
+        _shape= Instantiate(Shapes[shapeType], _position, Quaternion.identity);
         
     }
     
+    public void SetShapes()
+    {
+        Shapes = new GameObject[7];
+        Shapes[0] = Resources.Load<GameObject>("Prefabs/I");
+        Shapes[1] = Resources.Load<GameObject>("Prefabs/J");
+        Shapes[2] = Resources.Load<GameObject>("Prefabs/L");
+        Shapes[3] = Resources.Load<GameObject>("Prefabs/O");
+        Shapes[4] = Resources.Load<GameObject>("Prefabs/S");
+        Shapes[5] = Resources.Load<GameObject>("Prefabs/T");
+        Shapes[6] = Resources.Load<GameObject>("Prefabs/Z");
+    }
+    
+    /// <summary>
+    ///  Move PlayablePiece in direction (new position)
+    /// </summary>
+    /// <param name="direction"></param>
     public void Move(Vector3Int direction)
     {
         _position += direction;
         _shape.transform.position = _position;
     }
 
+    
+    /// <summary>
+    /// Rotate PlayablePiece 90 degrees
+    /// </summary>
     public void Rotate()
     {
         _shape.transform.Rotate(0,0,90);
